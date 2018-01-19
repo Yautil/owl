@@ -6,7 +6,8 @@
             "type": "node",
             "request": "launch",
             "cwd": "${workspaceRoot}/dist",
-            "runtimeExecutable": "${workspaceRoot}/node_modules/.bin/electron",
+            // Use the following for Linux
+            //"runtimeExecutable": "${workspaceRoot}/node_modules/.bin/electron",
             // Use the following for Windows
             "runtimeExecutable": "${workspaceRoot}/node_modules/.bin/electron.cmd",
             "program": "${workspaceRoot}/dist/index.js"
