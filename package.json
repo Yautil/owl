@@ -1,8 +1,8 @@
 {
-  "name": "angular-electron-dream-starter",
-  "productName": "Angular Electron Dream Starter",
-  "version": "7.0.0",
-  "description": "An Angular 2 Electron Starter kit featuring Webpack, Angular 2 (Router, Http, Forms, Services, ngrx, Tests, E2E, Coverage), Karma, Protractor, Jasmine, Istanbul, and TypeScript",
+  "name": "owl",
+  "productName": "OWL",
+  "version": "1.0.0",
+  "description": "Verwaltung und Analyse von Beratungsgesprächen",
   "keywords": [
     "angular",
     "angular2",
@@ -12,9 +12,9 @@
     "typescript",
     "ngrx"
   ],
-  "author": "Colin Skow <colinskow@gmail.com>",
-  "homepage": "https://github.com/colinskow/angular-electron-dream-starter",
-  "license": "MIT",
+  "author": "yautil",
+  "homepage": "https://github.com/yautil",
+  "license": "GPL-3.0+",
   "scripts": {
     "build:aot": "npm run clean:build && npm run clean:aot && npm run prep:dist && npm-run-all -p build:main:prod build:renderer:aot:prod",
     "build:dev:watch": "npm run clean:build && npm-run-all -p -r \"build:main:dev -- --watch\" \"build:renderer:dev -- --watch\"",
@@ -72,12 +72,15 @@
     "webpack": "webpack"
   },
   "dependencies": {
+    "@types/jquery": "^3.2.18",
     "bootstrap": "^4.0.0-beta.3",
     "electron-devtools-installer": "^2.2.0",
-    "rxjs": "~5.4.0",
-    "yarn": "^1.3.2"
+    "jquery": "^3.2.1",
+    "popper.js": "^1.12.9",
+    "rxjs": "~5.4.0"
   },
   "devDependencies": {
+    "yarn": "^1.3.2",
     "@angular/animations": "~4.4.3",
     "@angular/common": "~4.4.3",
     "@angular/compiler": "~4.4.3",
@@ -185,7 +188,7 @@
     "zone.js": "~0.8.11"
   },
   "build": {
-    "appId": "com.electron.angular-electron-dream-starter",
+    "appId": "com.electron.owl",
     "directories": {
       "buildResources": "src/resources",
       "output": "packages",
@@ -207,10 +210,10 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/colinskow/angular-electron-dream-starter.git"
+    "url": "https://github.com/yautil/owl.git"
   },
   "bugs": {
-    "url": "https://github.com/colinskow/angular-electron-dream-starter/issues"
+    "url": "https://github.com/yautil/owl/issues"
   },
   "engines": {
     "node": ">= 6.0.0",

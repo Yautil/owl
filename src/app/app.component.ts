@@ -9,9 +9,11 @@ import {
 import { Observable } from 'rxjs/Observable';
 import 'rxjs/add/operator/take';
 import { shell } from 'electron';
+import * as $ from 'jquery';
 import { AppState } from './reducers';
 import { Store } from '@ngrx/store';
 import { HomeState } from './home/home.reducer';
+import "bootstrap";
 
 /*
  * App Component
@@ -23,47 +25,7 @@ import { HomeState } from './home/home.reducer';
   styleUrls: [
     './app.component.css'
   ],
-  template: `
-    <nav>
-      <a [routerLink]=" ['./'] "
-        routerLinkActive="active" [routerLinkActiveOptions]= "{exact: true}">
-        Index
-      </a>
-      <a [routerLink]=" ['./home'] "
-        routerLinkActive="active" [routerLinkActiveOptions]= "{exact: true}">
-        Home
-      </a>
-      <a [routerLink]=" ['./detail'] "
-        routerLinkActive="active" [routerLinkActiveOptions]= "{exact: true}">
-        Detail
-      </a>
-      <a [routerLink]=" ['./barrel'] "
-        routerLinkActive="active" [routerLinkActiveOptions]= "{exact: true}">
-        Barrel
-      </a>
-      <a [routerLink]=" ['./about'] "
-        routerLinkActive="active" [routerLinkActiveOptions]= "{exact: true}">
-        About
-      </a>
-    </nav>
-
-    <main>
-      <router-outlet></router-outlet>
-    </main>
-
-    <pre class="app-state">this.state$ = {{ state$ | async | json }}</pre>
-
-    <footer>
-      <span>
-        Angular Electron Dream Starter by <a (click)="openURL(url)" href="#">@ColinSkow</a>
-      </span>
-      <div>
-        <a [href]="url">
-          <img [src]="angularclassLogo" width="25%">
-        </a>
-      </div>
-    </footer>
-  `
+  templateUrl: `./templates/index.tpl.html`
 })
 export class AppComponent implements OnInit {
   public angularclassLogo = 'assets/img/angular-electron.svg';

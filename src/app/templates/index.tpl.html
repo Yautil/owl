@@ -1,0 +1,39 @@
+<div class="navbar navbar-inverse navbar-fixed-left">
+    <a class="navbar-brand" href="#">Brand</a>
+    <ul class="nav navbar-nav">
+        <li>
+            <a [routerLink]= "['./home']" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">
+                Home
+            </a>
+        </li>
+        <li>
+            <a [routerLink]= "['./about']"  routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">
+                About
+            </a>
+        </li>
+        <li>
+            <a href="#">Link4</a>
+        </li>
+        <li>
+            <a href="#">Link5</a>
+        </li>
+    </ul>
+</div>
+
+<main>
+    <router-outlet></router-outlet>
+</main>
+
+<pre class="app-state">this.state$ = {{ state$ | async | json }}</pre>
+
+<footer>
+    <span>
+        Angular Electron Dream Starter by
+        <a (click)="openURL(url)" href="#">@ColinSkow</a>
+    </span>
+    <div>
+        <a [href]="url">
+            <img [src]="angularclassLogo" width="25%">
+        </a>
+    </div>
+</footer>
